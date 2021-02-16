@@ -62,22 +62,12 @@ colourPalette(){
     echo $paleta
 }
 
-l1='       .       '       
-l2='      / \      '
-l3='     /   \     '
-l4='    /^.   \    '
-l5='   /  .-.  \   '
-l6='  /  (   ) _\  '
-l7=' / _.~   ~._^\ '
-l8='/.^         ^.\'
-
-echo -e '__________________________'
-echo -e ${BLUE}$(l1)'|'$(userName)
-echo -e ${BLUE}$(l2)'|'$(getDistroName)
-echo -e ${BLUE}$(l3)'|'$(packagesList)
-echo -e ${BLUE}$(l4)'|'$(distroUptime)
-echo -e ${BLUE}$(l5)'|'$(kernelVersion)
-echo -e ${BLUE}$(l6)'|'$(myTerminal)
-echo -e ${BLUE}$(l7)'|'$(getShell)
-echo -e ${BLUE}$(l8)'|'$(currentEnvironment)
+echo -e ${BLUE} '       .       ' $(userName)    
+echo -e ${BLUE} '      / \      ' $(getDistroName)
+echo -e ${BLUE} '     /   \     ' $(packagesList)
+echo -e ${BLUE} '    /^.   \    ' $(distroUptime)
+echo -e ${BLUE} '   /  .-.  \   ' $(kernelVersion)
+echo -e ${BLUE} '  /  (   ) _\  ' $(myTerminal)
+echo -e ${BLUE} ' / _.~   ~._^\ ' $(getShell)
+echo -e ${BLUE} '/.^         ^.\' $(currentEnvironment)
 echo -e "  "$(colourPalette)
