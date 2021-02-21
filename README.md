@@ -2,7 +2,7 @@
 
 Configuration:
 
-### Install wmctrl and lsb_release on your system; then, clone this repo and add an alias to your bashrc o zshrc
+### Install wmctrl and lsb_release packages on your system; then, clone this repo and add an alias to your bashrc o zshrc
 
 Example:
 
