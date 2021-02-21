@@ -2,7 +2,7 @@
 
 Configuration:
 
-### clone this repo and add an alias to your bashrc o zshrc
+### Install wmctrl on your system; then, clone this repo and add an alias to your bashrc o zshrc
 
 Example:
 
