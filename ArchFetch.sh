@@ -42,8 +42,8 @@ getShell(){
 }
 
 currentEnvironment(){
-    environment=$(wmctrl -m | grep Name | awk '{printf $2}')
-    echo "${YELLOW}| My WM is: ${LWHITE}$environment"
+    environment=$XDG_CURRENT_DESKTOP
+    echo "${YELLOW}| My environment is: ${LWHITE}$environment"
 }
 
 myTerminal(){
@@ -71,3 +71,4 @@ echo -e ${BLUE} '  /  (   ) _\  ' $(myTerminal)
 echo -e ${BLUE} ' / _.~   ~._^\ ' $(getShell)
 echo -e ${BLUE} '/.^         ^.\' $(currentEnvironment)
 echo -e "  "$(colourPalette)
+
