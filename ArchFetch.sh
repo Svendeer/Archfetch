@@ -43,11 +43,27 @@ getShell(){
 
 currentEnvironment(){
     environment=$XDG_CURRENT_DESKTOP
-    echo "${YELLOW}| My environment is: ${LWHITE}$environment"
+    
+    if [[ $environment == "" ]];
+    then
+        wm=$(wmctrl -m | grep Name | awk '{printf $2}')
+        echo "${YELLOW}| I'm using: ${LWHITE}$wm"
+    else
+        echo "${YELLOW}| I'm using: ${LWHITE}$environment"
+    fi
 }
 
 myTerminal(){
-    echo "${YELLOW}| This terminal is: ${LWHITE}$TERM"
+    term=$TERM
+    case $term in
+        xterm-256color )
+             terminal="Konsole"
+            ;;
+        st-256color)
+            terminal="ST-Terminal"
+            ;;
+    esac
+    echo "${YELLOW}| My terminal is: ${LWHITE}$terminal"
 }
 
 colourPalette(){
